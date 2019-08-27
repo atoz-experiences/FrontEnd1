@@ -1,0 +1,32 @@
+.formContainer {
+    background: #17223b;
+    height: 600px;
+    padding-top: 80px;
+}
+
+.cardContainer {
+    background: #263859;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 10px 10px 10px #6b778d;
+}
+
+input {
+    width: 300px;
+    height: 30px;
+    margin: 5px;
+}
+
+button {
+    background: #ff6768;
+    width: 150px;
+    height: 30px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #6b778d;
+}
