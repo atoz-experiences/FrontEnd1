@@ -7,49 +7,71 @@ import ExperienceCard from "./ExperienceCard";
 
 function ExperienceListHome() {
 
-    const [experiences, setExperiences] = useState([])
+    const [experiences, setExperiences] = useState()
     
-    useEffect(() => {
-        axios.get('https://atoz-backend.herokuapp.com/api/experiences')
-            .then( r => {
-                setExperiences(r.data.experiences);
-                console.log(experiences);
-            })
-            .catch( e => console.log('Axois Experience GET Error:', e))
-    }, [experiences])
+    const getData = () => {
 
-    return (
+        axios
+        .get(`https://atoz-backend.herokuapp.com/api/experiences`)
+        .then(r => {
+            setExperiences(r.data.experiences)
+        })
+        .catch( e => console.log('Axios Experience GET Error:', e))
+    
+    };
+
+    useEffect(getData, [])
+    
+    if (experiences != null || experiences != undefined) {
+        console.log("Experiences Array: ", experiences)  
+        return (
+            <div>                
+                <div className="experiences-ctn">
+                    {experiences.map( el => {
+                        return (                    
+                            <div>
+                                <Route
+                                    exact path="/" 
+                                    render={props => <ExperienceCard {...props} ex={el} />}
+                                />
+                                <Route 
+                                    exact path="/adventures" 
+                                    render={props => <ExperienceCard {...props} ex={el} />}
+                                />
+                                <Route 
+                                    exact path="/food-tours" 
+                                    render={props => <ExperienceCard {...props} ex={el} />}
+                                />
+                                <Route 
+                                    exact path="/cooking" 
+                                    render={props => <ExperienceCard {...props} ex={el} />}
+                                />
+                                <Route 
+                                    exact path="/surfing" 
+                                    render={props => <ExperienceCard {...props} ex={el} />}
+                                />
+                                <Route 
+                                    exact path="/concerts" 
+                                    render={props => <ExperienceCard {...props} ex={el} />}
+                                />
+                                <Route 
+                                    exact path="/social-impact" 
+                                    render={props => <ExperienceCard {...props} ex={el} />}
+                                />
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+        );
+    }
+    else {
+      return (
         <div>
-            <Route 
-                exact path="/" 
-                render={props => <ExperienceCard {...props} ex={experiences.map(e => e)} />}
-            />
-            <Route 
-                exact path="/adventures" 
-                render={props => <ExperienceCard {...props} ex={experiences.map(e => e)} />}
-            />
-            <Route 
-                exact path="/food-tours" 
-                render={props => <ExperienceCard {...props} ex={experiences.map(e => e)} />}
-            />
-            <Route 
-                exact path="/cooking" 
-                render={props => <ExperienceCard {...props} ex={experiences.map(e => e)} />}
-            />
-            <Route 
-                exact path="/surfing" 
-                render={props => <ExperienceCard {...props} ex={experiences.map(e => e)} />}
-            />
-            <Route 
-                exact path="/concerts" 
-                render={props => <ExperienceCard {...props} ex={experiences.map(e => e)} />}
-            />
-            <Route 
-                exact path="/socail-impact" 
-                render={props => <ExperienceCard {...props} ex={experiences.map(e => e)} />}
-            />
+            <div className="loading">Loading...</div>
         </div>
-    );
+      )
+    }
 }
 
 export default ExperienceListHome;
