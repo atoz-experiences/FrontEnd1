@@ -8,6 +8,7 @@ import ExperienceList from './components/Home/ExperienceList';
 import UpdateForm from './components/AddExperience/UpdateForm';
 
 import './App.css';
+import Home from "./components/Home/Home";
 
 class App extends React.Component {
   constructor() {
@@ -62,23 +63,26 @@ class App extends React.Component {
   
 render() {
   return (
-    <div>
-    <nav>
-    <NavLink to="/experiences" >Experiences</NavLink>
-    <NavLink to="/form" >Add Experience</NavLink>
-    </nav>
-    <Route exact path ="/experiences" render={props =>
-    <ExperienceList {...props} experiences={this.state.experiences} setUpdateForm={this.setUpdateForm} />
-    } 
-    />
-    <Route path="/form" render={props => 
-    <Form {...props}  addExperience={this.addExperience} />
-    } 
-    />   
-    <Route path="/update-form" render={props =>
-    <UpdateForm {...props} activeExperience={this.state.whatever} updateExperience={this.updateExperience} />
-    }
-    />
+
+    <div className="App">
+      <Home />
+//       <div>
+      <nav>
+        <NavLink to="/experiences" >Experiences</NavLink>
+        <NavLink to="/form" >Add Experience</NavLink>
+      </nav>
+      <Route exact path ="/experiences" render={props =>
+      <ExperienceList {...props} experiences={this.state.experiences} setUpdateForm={this.setUpdateForm} />
+      } 
+      />
+      <Route path="/form" render={props => 
+      <Form {...props}  addExperience={this.addExperience} />
+      } 
+      />   
+      <Route path="/update-form" render={props =>
+      <UpdateForm {...props} activeExperience={this.state.whatever} updateExperience={this.updateExperience} />
+      }
+      />
     </div>
   );
 }

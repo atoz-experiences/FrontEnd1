@@ -1,13 +1,13 @@
 import React from "react";
 import { Router, Route } from "react-router-dom";
 import Type from "./Type";
-import ExperienceList from "./ExperienceList";
+import ExperienceListHome from "./ExperienceListHome";
 
-function HomePage() {
+const HomePage = function() {
     return (
-        <div>
+        <div className="home-ctn">
             <Type />
-            <ExperienceList />
+            <ExperienceListHome />
         </div>
     )
 }
@@ -15,11 +15,9 @@ function HomePage() {
 function Home() {
 
     return (
-        <Router>
-            <div>
-                <Route path="/" exact component={HomePage} />
-            </div>
-        </Router>
+        <div>
+            <Route path="/" exact component={HomePage} />
+        </div>
     );
 }
 
