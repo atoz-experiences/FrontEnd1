@@ -1,14 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { Route, NavLink } from 'react-router-dom';
-
-
 import Form from './components/AddExperience/Form';
 import ExperienceList from './components/Home/ExperienceList';
 import UpdateForm from './components/AddExperience/UpdateForm';
-
 import './App.css';
 import Home from "./components/Home/Home";
+import ExperienceCard from "./components/Home/ExperienceCard"
+import Nav from "./components/Nav"
 
 class App extends React.Component {
   constructor() {
@@ -61,31 +60,22 @@ class App extends React.Component {
 
 
   
-render() {
-  return (
-
-    <div className="App">
-      <Home />
-//       <div>
-      <nav>
-        <NavLink to="/experiences" >Experiences</NavLink>
-        <NavLink to="/form" >Add Experience</NavLink>
-      </nav>
-      <Route exact path ="/experiences" render={props =>
-      <ExperienceList {...props} experiences={this.state.experiences} setUpdateForm={this.setUpdateForm} />
-      } 
-      />
-      <Route path="/form" render={props => 
-      <Form {...props}  addExperience={this.addExperience} />
-      } 
-      />   
-      <Route path="/update-form" render={props =>
-      <UpdateForm {...props} activeExperience={this.state.whatever} updateExperience={this.updateExperience} />
-      }
-      />
-    </div>
-  );
-}
+  render() {
+    return (
+      <div className="App">
+        <Nav />
+        <Route exact path ="/experiences" render={props =>
+        <ExperienceList {...props} experiences={this.state.experiences} setUpdateForm={this.setUpdateForm} />} />
+        <Home />
+        <Route path="/form" render={props => 
+        <Form {...props}  addExperience={this.addExperience} />} />   
+        <Route path="/update-form" render={props =>
+        <UpdateForm {...props} activeExperience={this.state.whatever} updateExperience={this.updateExperience} />
+        }
+        />
+      </div>
+    );
+  }
 }
 
 export default App;

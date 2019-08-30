@@ -1,14 +1,21 @@
+.type-link-ctn-ctn {
+    width: 100%;
+    margin: 0 auto;
+}
+
 .type-link-ctn {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 95%;
+    width: 100%;
     margin: 50px auto;
 }
 
 .type-link-a {
+    margin-top: 50px;
     width: 15%;
+    min-width: 185px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
     text-decoration: none;
@@ -49,7 +56,8 @@
     font-size: 16px ;
     font-weight: 600 ;
     line-height: 1.375em ;
-    color: #484848 ;
+    color: rgba(0, 0, 0, 0.87);
+    padding-bottom: 6px;
     overflow: hidden ;
     text-overflow: ellipsis ;
     max-height: 2.75em ;
@@ -73,6 +81,73 @@
 }
 
 .home-ctn {
-    width: 95%;
-    margin: 0 auto;
+    max-width: 1300px;
+    margin: 64px auto;
+}
+
+.experiences-ctn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 16px auto;
+}
+
+.experiences-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #333333;
+}
+
+.MuiAppBar-colorPrimary {
+    background-color: #FF4081 !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px !important;
+    position: fixed !important;
+    top: 0 !important;
+}
+
+.MuiButtonBase-root.MuiIconButton-root.makeStyles-menuButton-2.MuiIconButton-colorInherit.MuiIconButton-edgeStart {
+    padding: 0 !important;
+}
+
+.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorInherit {
+    padding: 0 !important;
+}
+
+.loading {
+    margin: 50px 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #FF4081;
+}
+
+@media (max-width: 1299px) {
+    .type-link-ctn-ctn {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .type-link-ctn {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 32px auto;
+    }
+    
+    .experiences-ctn {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 16px auto;
+    }
+}
+
+a {
+    text-decoration: none !important;
+    color: inherit;
 }
