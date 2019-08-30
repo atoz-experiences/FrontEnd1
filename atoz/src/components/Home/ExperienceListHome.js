@@ -5,14 +5,15 @@ import ExperienceCard from "./ExperienceCard";
 
 // set experience as all on page load and then when user selects, set state and make dynamic
 
-function ExperienceList() {
+function ExperienceListHome() {
 
     const [experiences, setExperiences] = useState([])
     
     useEffect(() => {
         axios.get('https://atoz-backend.herokuapp.com/api/experiences')
             .then( r => {
-                setExperiences(r)
+                setExperiences(r.data.experiences);
+                console.log(experiences);
             })
             .catch( e => console.log('Axois Experience GET Error:', e))
     }, [experiences])
@@ -51,4 +52,4 @@ function ExperienceList() {
     );
 }
 
-export default ExperienceList;
+export default ExperienceListHome;
