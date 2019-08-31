@@ -1,11 +1,13 @@
 .formContainer {
-    background: #17223b;
+    background: white;
     height: 600px;
     padding-top: 80px;
 }
 
 .cardContainer {
-    background: #263859;
+    background: #FF4081;
+    border: 1px solid grey;
+    border-radius: 10px;
     width: 600px;
     height: 400px;
     margin: 0 auto;
@@ -23,10 +25,10 @@ input {
 }
 
 button {
-    background: #ff6768;
+    background: white;
     width: 150px;
     height: 30px;
-    font-size: 1rem;
+    font-size: .80rem;
     border-radius: 10px;
     border: 1px solid #6b778d;
 }

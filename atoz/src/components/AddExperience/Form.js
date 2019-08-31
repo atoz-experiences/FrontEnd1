@@ -8,7 +8,8 @@ class Form extends React.Component {
             date: "",
             location: "",
             description: "",
-            price: ""
+            price: "",
+            image: ""
         }
     }
 
@@ -36,7 +37,8 @@ class Form extends React.Component {
             date: "",
             location: "",
             description: "",
-            price: ""
+            price: "",
+            image: ""
         }})
     }
 
@@ -46,10 +48,11 @@ class Form extends React.Component {
             <div className='formContainer'>
                 <form onSubmit={this.handleSubmit} className='cardContainer'>
                     <input type="text" name="title" onChange={this.changeHandler} placeholder="Title" value={this.state.experience.title} />
-                    <input type="number" name="date" onChange={this.changeHandler} placeholder="Date" value={this.state.experience.date} />
+                    <input type="date" name="date" onChange={this.changeHandler} placeholder="Date" value={this.state.experience.date} />
                     <input type="text" name="location" onChange={this.changeHandler} placeholder="Location" value={this.state.experience.location} />
                     <input type="text" name="description" onChange={this.changeHandler} placeholder="Description" value={this.state.experience.description} />
                     <input type="number" name="price" onChange={this.changeHandler} placeholder="Price" value={this.state.experience.price} />
+                    <input type="file" name="image" onChange={this.changeHandler} placeholder="Image" value={this.state.experience.image} />
                     <button>Add New Experiencet</button>
                 </form>
             </div>

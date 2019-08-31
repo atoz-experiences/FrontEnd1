@@ -1,0 +1,15 @@
+.exCard {
+    border: 1px solid black;
+    border-radius: 10px;
+    background: #FF4081;
+    color: white;
+    margin: 20px 10px;
+    box-shadow: 10px 10px 10px #6b778d;
+    padding: 10px
+}
+
+.exContainer {
+    margin-top: 100px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
