@@ -1,4 +1,4 @@
-WEBSITE - URL - https://atoz-react.netlify.com/
+WEBSITE - URL - https://atoz-experiences-react.netlify.com/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

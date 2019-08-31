@@ -1,0 +1,153 @@
+.type-link-ctn-ctn {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.type-link-ctn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 50px auto;
+}
+
+.type-link-a {
+    margin-top: 50px;
+    width: 15%;
+    min-width: 185px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    text-decoration: none;
+}
+  
+.type-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.type-card-img-ctn {
+    width: 100%;
+    height: 65%;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.type-card-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: static;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.type-card-txt {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px;
+}
+
+.type-card-title {
+    margin: 0px;
+    font-size: 16px ;
+    font-weight: 600 ;
+    line-height: 1.375em ;
+    color: rgba(0, 0, 0, 0.87);
+    padding-bottom: 6px;
+    overflow: hidden ;
+    text-overflow: ellipsis ;
+    max-height: 2.75em ;
+    -webkit-line-clamp: 2 ;
+    display: -webkit-box ;
+    -webkit-box-orient: vertical ;
+}
+
+.type-card-description {
+    margin: 0px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2857142857142858em;
+    color: #484848;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 3.8571428571428577em;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical
+}
+
+.home-ctn {
+    max-width: 1300px;
+    margin: 64px auto;
+}
+
+.experiences-ctn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 16px auto;
+}
+
+.experiences-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #333333;
+}
+
+.MuiAppBar-colorPrimary {
+    background-color: #FF4081 !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px !important;
+    position: fixed !important;
+    top: 0 !important;
+}
+
+.MuiButtonBase-root.MuiIconButton-root.makeStyles-menuButton-2.MuiIconButton-colorInherit.MuiIconButton-edgeStart {
+    padding: 0 !important;
+}
+
+.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorInherit {
+    padding: 0 !important;
+}
+
+.loading {
+    margin: 50px 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #FF4081;
+}
+
+@media (max-width: 1299px) {
+    .type-link-ctn-ctn {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .type-link-ctn {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 32px auto;
+    }
+    
+    .experiences-ctn {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 16px auto;
+    }
+}
+
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
