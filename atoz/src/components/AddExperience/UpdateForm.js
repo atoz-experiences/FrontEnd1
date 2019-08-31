@@ -13,7 +13,7 @@ class UpdateForm extends React.Component {
             value = parseInt(value, 10);
         } 
 
-        this,this.setState(prevState => ({
+        this.this.setState(prevState => ({
             experience: {
                 ...prevState.experience,
                 [e.target.name]: value

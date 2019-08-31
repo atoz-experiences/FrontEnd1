@@ -21,7 +21,7 @@ class App extends React.Component {
   componentDidMount() {
     axios
       .get("https://atoz-backend.herokuapp.com/api/experiences")
-      .then(response => this.setState({experiences: response.data}))
+      .then(response => this.setState({experiences: response.data.experiences}))
       .catch(error => console.log(error))
   };
 
