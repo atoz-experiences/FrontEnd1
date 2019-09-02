@@ -130,7 +130,7 @@ export default function Nav() {
       onClose={handleMobileMenuClose}
     >
         <BrowserRouter>
-            <Link to="/form">
+            <Link to="/home/form">
                 <MenuItem>
                     <IconButton className="iconButton" color="inherit">                    
                         <AddCircleIcon />                    
@@ -140,7 +140,7 @@ export default function Nav() {
             </Link>
         </BrowserRouter>
         <BrowserRouter>
-            <Link to="/experiences">
+            <Link to="/home/experiences">
                 <MenuItem>            
                     <IconButton className="iconButton" color="inherit">                    
                         <ExploreIcon />                    
@@ -195,14 +195,14 @@ export default function Nav() {
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <BrowserRouter>
-                <Link to="/form">
+                <Link to="/home/form">
                     <IconButton color="inherit">                    
                         <AddCircleIcon />                    
                     </IconButton>
                 </Link>
             </BrowserRouter>
             <BrowserRouter>
-                <Link to="/experiences">
+                <Link to="/home/experiences">
                     <IconButton color="inherit">                    
                         <ExploreIcon />                    
                     </IconButton>

@@ -31,31 +31,31 @@ function ExperienceListHome() {
                         return (                    
                             <div>
                                 <Route
-                                    exact path="/" 
+                                    exact path="/home" 
                                     render={props => <ExperienceCard {...props} ex={el} />}
                                 />
                                 <Route 
-                                    exact path="/adventures" 
+                                    exact path="/home/adventures" 
                                     render={props => <ExperienceCard {...props} ex={el} />}
                                 />
                                 <Route 
-                                    exact path="/food-tours" 
+                                    exact path="/home/food-tours" 
                                     render={props => <ExperienceCard {...props} ex={el} />}
                                 />
                                 <Route 
-                                    exact path="/cooking" 
+                                    exact path="/home/cooking" 
                                     render={props => <ExperienceCard {...props} ex={el} />}
                                 />
                                 <Route 
-                                    exact path="/surfing" 
+                                    exact path="/home/surfing" 
                                     render={props => <ExperienceCard {...props} ex={el} />}
                                 />
                                 <Route 
-                                    exact path="/concerts" 
+                                    exact path="/home/concerts" 
                                     render={props => <ExperienceCard {...props} ex={el} />}
                                 />
                                 <Route 
-                                    exact path="/social-impact" 
+                                    exact path="/home/social-impact" 
                                     render={props => <ExperienceCard {...props} ex={el} />}
                                 />
                             </div>

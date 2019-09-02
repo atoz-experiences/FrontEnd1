@@ -151,3 +151,36 @@ a {
     text-decoration: none !important;
     color: inherit;
 }
+
+.MuiButton-containedPrimary {
+    background-color: #FF4081 !important;
+}
+
+.MuiTypography-root.MuiLink-root.MuiLink-underlineHover.MuiTypography-body2.MuiTypography-colorPrimary {
+    color: #FF4081 !important;
+}
+
+.MuiCheckbox-colorPrimary.Mui-checked {
+    color: #FF4081 !important;
+}
+
+.MuiFormLabel-root.Mui-focused {
+    color: #FF4081 !important;
+}
+
+.MuiButton-root {
+    padding: 0 !important;
+}
+
+button {
+    height: 45px !important;
+}
+
+.MuiTypography-h5 {
+    font-weight: 600 !important;
+    font-size: 2rem !important;
+}
+
+.MuiFormControlLabel-root {
+    margin-top: 16px !important;
+}
