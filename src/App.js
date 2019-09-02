@@ -6,8 +6,9 @@ import ExperienceList from './components/Home/ExperienceList';
 import UpdateForm from './components/AddExperience/UpdateForm';
 import './App.css';
 import Home from "./components/Home/Home";
-import ExperienceCard from "./components/Home/ExperienceCard"
 import Nav from "./components/Nav"
+import SignInSide from "./components/SignInSide";
+import SignUp from './components/SignUp'
 
 class App extends React.Component {
   constructor() {
@@ -63,10 +64,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Nav />
+        <Route path="/home" component={Nav} />
+        <Route exact path="/" component={SignInSide} />
+        <Route exact path="/sign-up" component={SignUp} />
+        <Route path="/home" component={Home} />
         <Route exact path ="/experiences" render={props =>
-        <ExperienceList {...props} experiences={this.state.experiences} setUpdateForm={this.setUpdateForm} />} />
-        <Home />
+        <ExperienceList {...props} experiences={this.state.experiences} setUpdateForm={this.setUpdateForm} />} />        
         <Route path="/form" render={props => 
         <Form {...props}  addExperience={this.addExperience} />} />   
         <Route path="/update-form" render={props =>

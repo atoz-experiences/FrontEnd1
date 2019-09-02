@@ -50,7 +50,7 @@ class Form extends React.Component {
                     <input type="text" name="location" onChange={this.changeHandler} placeholder="Location" value={this.state.experience.location} />
                     <input type="text" name="description" onChange={this.changeHandler} placeholder="Description" value={this.state.experience.description} />
                     <input type="number" name="price" onChange={this.changeHandler} placeholder="Price" value={this.state.experience.price} />
-                    <button>Add New Experiencet</button>
+                    <button>Add New Experience</button>
                 </form>
             </div>
         );
